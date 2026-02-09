@@ -3,9 +3,8 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class PlayerMove : MonoBehaviour
-{
-    
-    private Vector3 playerPosition;
+{    
+    private Vector2 playerPosition;
 
     void Start()
     {
@@ -20,6 +19,6 @@ public class PlayerMove : MonoBehaviour
     void OnMove(InputValue value) {
 
         Vector2 moveInput = value.Get<Vector2>();
-        playerPosition = new Vector3(moveInput.x, 0, moveInput.y);
+        playerPosition = new Vector2(moveInput.x, moveInput.y);
     }
 }
